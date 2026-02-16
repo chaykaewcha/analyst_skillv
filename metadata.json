@@ -1,0 +1,7 @@
+{
+  "name": "Tun-Sports-Skill-Analyzer",
+  "description": "ระบบวิเคราะห์ทักษะกีฬาพื้นฐาน โรงเรียนเตรียมอุดมศึกษาน้อมเกล้า โดยใช้ Gemini AI วิเคราะห์วิดีโอรายบุคคล",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

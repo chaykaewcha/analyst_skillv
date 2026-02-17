@@ -16,19 +16,26 @@ export const getStudentById = async (studentId: string): Promise<Student | null>
   }
 };
 
-export const saveAnalysisToSheet = async (data: SaveData): Promise<boolean> => {
+// ปรับปรุง function signature ให้รับ videoBase64 และ mimeType และเปลี่ยน return type
+export const saveAnalysisToSheet = async (data: SaveData, videoBase64?: string, mimeType?: string): Promise<{ success: boolean; videoUrl?: string }> => {
   try {
     const response = await fetch(SCRIPT_URL, {
       method: 'POST',
       body: JSON.stringify({
         action: 'saveAnalysis',
-        data: data
+        data: data,
+        // ส่งข้อมูลวิดีโอไปถ้ามี
+        videoFile: videoBase64 ? {
+          base64: videoBase64,
+          mimeType: mimeType
+        } : null
       })
     });
     const result = await response.json();
-    return result.status === 'success';
+    // คืนค่า URL วิดีโอถ้ามีใน response
+    return { success: result.status === 'success', videoUrl: result.videoUrl };
   } catch (error) {
     console.error("Error saving analysis:", error);
-    return false;
+    return { success: false };
   }
 };

@@ -4,7 +4,7 @@ export const API_KEYS = [
   "AIzaSyBIjKnBdB4ynhh-ZBEBgU4-wT2t5GS25kg"
 ];
 
-export const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyv78Nyq1UWAyU7QX93eVDSdhJ_IuPXhqN-hQRNmINrHc8p-hckJDmnBJgUuSu6i6Rj/exec';
+export const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxgT6Go9PSTcGpXn8UF8oyqsRLeVYTUxmE-MPFuYjRg8fQhvchS8ONaUvwpoOUIg2odvA/exec';
 
 export const COLORS = {
   primary: '#0ea5e9', // Sky 500

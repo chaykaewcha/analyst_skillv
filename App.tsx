@@ -165,6 +165,24 @@ const App: React.FC = () => {
             text: 'วิเคราะห์ทักษะและบันทึกลิงก์วิดีโอลง Google Sheet เรียบร้อยแล้ว',
             icon: 'success',
             confirmButtonColor: '#0ea5e9'
+          }).then(() => {
+            // --- เคลียร์ค่าต่างๆ หลังบันทึกสำเร็จ ---
+            setStudentId('');
+            setStudent(null);
+            setSelectedSport(SportType.Volleyball); // กลับไปค่าเริ่มต้น
+            setTestType(TestType.PreTest);         // กลับไปค่าเริ่มต้น
+            if (videoPreview) {
+              URL.revokeObjectURL(videoPreview); // ต้อง revoke ก่อน
+            }
+            setVideoFile(null);
+            setVideoPreview(null);
+            setAnalysisResult(null);
+            setSavedVideoUrl(null);
+            if (fileInputRef.current) {
+              fileInputRef.current.value = ""; // เคลียร์ค่าใน input type="file"
+            }
+            setStatusText(''); // เคลียร์สถานะ
+            // --- จบการเคลียร์ค่า ---
           });
         } else {
           Swal.fire({

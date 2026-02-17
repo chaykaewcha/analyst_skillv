@@ -5,7 +5,8 @@ export enum SportType {
   Takraw = 'ตะกร้อ',
   Badminton = 'แบดมินตัน',
   Athletics = 'กรีฑา',
-  TableTennis = 'เทเบิลเทนนิส'
+  TableTennis = 'เทเบิลเทนนิส',
+  Basketball = 'บาสเกตบอล' // เพิ่มตัวเลือกบาสเกตบอล
 }
 
 export enum TestType {

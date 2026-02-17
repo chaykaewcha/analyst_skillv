@@ -467,7 +467,7 @@ const App: React.FC = () => {
       </main>
       
       <footer className="mt-12 text-center text-slate-400 text-sm border-t border-slate-200 pt-8 pb-12 max-w-6xl mx-auto">
-        <p>© 2024 โรงเรียนเตรียมอุดมศึกษาน้อมเกล้า - ระบบวิเคราะห์ทักษะกีฬาด้วยเทคโนโลยี AI</p>
+        <p>© 2024 โรงเรียนเตรียมอุดมศึกษาน้อมเกล้า - ระบบวิเคราะห์ทักษะกีฬาด้วยเทคโนโลยี AI พัฒนาระบบโดย นายชุมพร แก้วชา</p>
       </footer>
     </div>
   );
